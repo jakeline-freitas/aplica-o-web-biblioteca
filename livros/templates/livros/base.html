@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    {# Load the tag library #}
+    {% load bootstrap4 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+
+
+</head>
+
+<body>
+
+    <header>
+        {% block header %}{% endblock  %}
+    </header>
+    <main>
+        {% block content %}
+        {% endblock  %}
+    </main>
+</body>
+
+</html>

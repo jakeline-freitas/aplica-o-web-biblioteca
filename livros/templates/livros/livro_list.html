@@ -1,0 +1,42 @@
+{% extends 'livros/base.html' %}
+
+
+{% block title %}Lista de livros{% endblock %}
+
+{% block header %}
+    <div class="container">
+        <h2>Livros</h2>
+    </div>
+{% endblock  %}
+
+{% block content %}
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Autor</th>
+                    <th>Genero</th>
+                    <th>Páginas</th>
+                    <th>Config</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for livro in livro_list %}
+                <tr>
+                    <td>{{livro.titulo}}</td>
+                    <td>{{livro.autor}}</td>
+                    <td>{{livro.genero}}</td>
+                    <td>{{livro.qtd_paginas}}</td>
+                    <td>
+                        <a type="button" href="{% url 'livros:deletar' livro.id %}"class="btn btn-light">Excluir</a>
+                        <a type="button" href="{% url 'livros:editar' livro.id %}"class="btn btn-light">Editar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <a type="button" href="{% url 'livros:criar' %}"class="btn btn-success">Cadastrar livro</a>
+    </div>
+      
+{% endblock  %}

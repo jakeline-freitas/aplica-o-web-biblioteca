@@ -1,0 +1,28 @@
+{% extends 'livros/base.html' %}
+{% load crispy_forms_tags %}
+{% load bootstrap4 %}
+
+{% block title %}Cadastro de livros{% endblock  %}
+
+{% block header %}
+
+{% endblock  %}
+{% block content %}
+
+    <div class="row mb-4 mb-5">
+        <div class="col-md-6 mx-auto">
+            <h3 class="text-center">Cadastro de livros</h3>
+
+            <hr>
+            <form method="post" action="">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                
+                <button type="submit" class="btn btn-primary botao">Cadastrar</button>
+                <a type="button" href = "{% url 'livros:listar'%}" class="btn btn-danger">Cancelar</a>
+
+            </form>
+        </div>
+
+    </div>
+{% endblock  %}

@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # local apps
     'livros.apps.LivrosConfig',
+    # bootstrap
+    'bootstrap4',
+    'crispy_forms',
 
 ]
 

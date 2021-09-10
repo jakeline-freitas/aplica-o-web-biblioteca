@@ -1,12 +1,12 @@
 from django.urls import path
-from . import views
+from .views import CriarLivro, EditarLivro, ListaLivro, DeleteLivro
 
 app_name = "livros"
 
 urlpatterns = [
-    path("", views.ListaLivro.as_view(), name="listar"),
-    path("cadastrarLivro/", views.CriarLivro.as_view(), name="criar"),
-    path("editarLivro/<int:pk>/", views.EditarLivro.as_view(), name="editar"),
-    path("deletarLivro/<int:pk>/", views.DeleteLivro.as_view(), name="deletar")
+    path("", ListaLivro.as_view(), name="listar"),
+    path("cadastrarLivro/", CriarLivro.as_view(), name="criar"),
+    path("editarLivro/<int:pk>/", EditarLivro.as_view(), name="editar"),
+    path("deletarLivro/<int:pk>/", DeleteLivro.as_view(), name="deletar")
 
 ]
