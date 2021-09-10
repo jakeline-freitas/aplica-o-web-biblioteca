@@ -29,8 +29,8 @@
                     <td>{{livro.genero}}</td>
                     <td>{{livro.qtd_paginas}}</td>
                     <td>
-                        <a type="button" href="{% url 'livros:deletar' livro.id %}"class="btn btn-light">Excluir</a>
-                        <a type="button" href="{% url 'livros:editar' livro.id %}"class="btn btn-light">Editar</a>
+                        <a type="button" href="{% url 'livros:deletar' livro.id %}"class="btn btn-danger">Excluir</a>
+                        <a type="button" href="{% url 'livros:editar' livro.id %}"class="btn btn-primary">Editar</a>
                     </td>
                 </tr>
             {% endfor %}
