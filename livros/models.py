@@ -7,3 +7,7 @@ class Livro(models.Model):
     genero = models.CharField(max_length=45)
     qtd_paginas = models.IntegerField()
 
+def __str__(self):
+    return self.titulo
+
+
